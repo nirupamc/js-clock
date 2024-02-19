@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FF3201;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(./Screenshot\ Capture\ -\ 2024-02-19\ -\ 20-41-08.png);
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: 2px solid rgb(114, 114, 114);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+.hand{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 2px;
+    height: 70px;
+    border-radius: 8px
+}
